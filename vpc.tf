@@ -44,7 +44,7 @@ resource "aws_subnet" "this" {
   cidr_block        = each.value.cidr_block
 
   tags = {
-    Name = each.key # ie. subnet_X
+    Name   = each.key                                 # ie. subnet_X
     Access = each.value.public ? "Public" : "Private" # This line added as final step in excerise 43
   }
 
